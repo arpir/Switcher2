@@ -38,7 +38,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "rectangle.2.swap", accessibilityDescription: LocalizedStrings.statusItemTooltip)
+            // 自定义菜单栏图标（模板图，自动适配深/浅色菜单栏）
+            if var icon = Bundle.main.url(forResource: "menubar-icon", withExtension: "png").flatMap({ NSImage(contentsOf: $0) }) {
+                icon.size = NSSize(width: 18, height: 18)
+                icon.isTemplate = true
+                button.image = icon
+            } else {
+                button.image = NSImage(systemSymbolName: "rectangle.2.swap", accessibilityDescription: LocalizedStrings.statusItemTooltip)
+            }
             button.action = #selector(statusBarButtonClicked)
             button.target = self
             button.toolTip = LocalizedStrings.statusItemTooltip
@@ -50,9 +57,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         // Initialize managers
         windowManager = WindowManager()
         hotkeyManager = HotkeyManager(windowManager: windowManager!)
-        
-        // Set up the bidirectional reference
-        windowManager?.hotkeyManager = hotkeyManager
         
         // Request accessibility permissions
         requestAccessibilityPermission()
@@ -70,22 +74,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     
     private func setupStatusBarMenu() {
         let menu = NSMenu()
-        
+
         // Preferences menu item
         let preferencesItem = NSMenuItem(title: LocalizedStrings.preferences, action: #selector(showPreferences), keyEquivalent: ",")
         preferencesItem.target = self
         menu.addItem(preferencesItem)
-        
+
         menu.addItem(NSMenuItem.separator())
-        
+
         // Quit App menu item
         let quitItem = NSMenuItem(title: LocalizedStrings.quitApp, action: #selector(quitApplication), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
-        
+
         statusItem?.menu = menu
     }
-    
+
     @objc func showPreferences() {
         // If the preferences window already exists, bring it to the front
         if let window = preferencesWindow {
@@ -99,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         let hostingView = NSHostingView(rootView: contentView)
         
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 600, height: 500),
+            contentRect: NSRect(x: 0, y: 0, width: 560, height: 400),
             styleMask: [.titled, .closable],
             backing: .buffered,
             defer: false

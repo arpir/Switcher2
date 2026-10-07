@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 574FC6C52E350802004915FC /* Build configuration list for PBXProject "DevSwitcher2" */;
+			buildConfigurationList = 574FC6C77E350802004915FC /* Build configuration list for PBXProject "DevSwitcher2" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -307,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		574FC6C52E350802004915FC /* Build configuration list for PBXProject "DevSwitcher2" */ = {
+		574FC6C77E350802004915FC /* Build configuration list for PBXProject "DevSwitcher2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				574FC6D72E350803004915FC /* Debug */,

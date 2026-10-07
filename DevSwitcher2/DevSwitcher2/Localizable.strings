@@ -20,7 +20,7 @@
 // MARK: - General Settings
 "general_settings_section_title" = "General Settings";
 "launch_at_startup" = "Launch at Startup";
-"launch_at_startup_description" = "Automatically start DevSwitcher2 when you log in";
+"launch_at_startup_description" = "Automatically start Switcher2 when you log in";
 
 // MARK: - DS2 Window Switcher Interface
 "window_switcher_title" = "Select Window";
@@ -39,20 +39,20 @@
 "multiple_windows" = "%d windows";
 
 // MARK: - Status Bar
-"status_item_tooltip" = "DevSwitcher2 - Enhanced Window Switching";
+"status_item_tooltip" = "Switcher2 - Enhanced Window Switching";
 
 // MARK: - Permission Prompts
-"accessibility_permission_required" = "DevSwitcher2 needs Accessibility permissions to function properly.";
+"accessibility_permission_required" = "Switcher2 needs Accessibility permissions to function properly.";
 "open_system_preferences" = "Open System Preferences";
 "accessibility_permission_title" = "Accessibility Permission Required";
-"accessibility_permission_message" = "DevSwitcher2 needs Accessibility permissions to get and switch application windows. Please enable DevSwitcher2 in System Preferences > Security & Privacy > Accessibility.";
+"accessibility_permission_message" = "Switcher2 needs Accessibility permissions to get and switch application windows. Please enable Switcher2 in System Preferences > Security & Privacy > Accessibility.";
 "open_system_preferences_button" = "Open System Preferences";
 "setup_later" = "Set Up Later";
 "accessibility_permission_granted" = "Accessibility permission granted";
 
 // MARK: - Restart Required
 "restart_required_title" = "Restart Required";
-"restart_required_message" = "Accessibility permission has been granted! Please restart DevSwitcher2 for the changes to take effect.";
+"restart_required_message" = "Accessibility permission has been granted! Please restart Switcher2 for the changes to take effect.";
 "restart_now" = "Restart Now";
 "restart_later" = "Restart Later";
 
@@ -66,7 +66,7 @@
 
 // MARK: - Menu Bar
 "preferences" = "Preferences";
-"quit_app" = "Quit DevSwitcher2";
+"quit_app" = "Quit Switcher2";
 
 // MARK: - Preferences
 "preferences_title" = "Preferences";
@@ -282,9 +282,9 @@
 "no_app_configs_message" = "No app-specific configurations";
 
 // MARK: - About Page
-"about_app" = "About DevSwitcher2";
+"about_app" = "About Switcher2";
 "version" = "Version 2.7.1";
-"app_description" = "DevSwitcher2 is a modern macOS productivity tool that enhances your window and application switching experience with dual-mode switching capabilities.";
+"app_description" = "Switcher2 is a modern macOS productivity tool that enhances your window and application switching experience with dual-mode switching capabilities.";
 "main_features" = "Main Features:";
 "feature_1" = "• DS2 Mode: Enhanced same-app window switching";
 "feature_2" = "• CT2 Mode: Improved Command+Tab for all apps";
@@ -300,7 +300,7 @@
 "open_website" = "Visit Website";
 "buy_me_coffee" = "Buy Me a Coffee";
 "support_development" = "Support Development";
-"coffee_description" = "If you find DevSwitcher2 helpful, consider buying me a coffee to support continued development!";
+"coffee_description" = "If you find Switcher2 helpful, consider buying me a coffee to support continued development!";
 "copyright" = "© 2025 River. All rights reserved.";
 
 // MARK: - Color Scheme Settings
@@ -321,4 +321,9 @@
 "color_scheme_circular_preview" = "Circular View";
 "color_scheme_list_preview" = "List View";
 "color_scheme_sample_app" = "Sample App";
-"color_scheme_sample_window" = "Window Title"; 
+"color_scheme_sample_window" = "Window Title";
+
+// MARK: - Advanced - Switcher View Master Toggle
+"switcher_view_enabled_label" = "Show Switcher View";
+"switcher_view_enabled_description" = "When on, the switcher UI appears on hotkey; when off, windows switch directly without any UI";
+"status_bar_toggle_switcher_view" = "Show Switcher View";

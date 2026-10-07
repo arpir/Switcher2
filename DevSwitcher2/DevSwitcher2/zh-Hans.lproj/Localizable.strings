@@ -20,7 +20,7 @@
 // MARK: - 通用设置
 "general_settings_section_title" = "通用设置";
 "launch_at_startup" = "开机自启动";
-"launch_at_startup_description" = "登录时自动启动 DevSwitcher2";
+"launch_at_startup_description" = "登录时自动启动 Switcher2";
 
 // MARK: - DS2窗口切换器界面
 "window_switcher_title" = "选择窗口";
@@ -39,20 +39,20 @@
 "multiple_windows" = "%d 个窗口";
 
 // MARK: - 状态栏
-"status_item_tooltip" = "DevSwitcher2 - 增强窗口切换";
+"status_item_tooltip" = "Switcher2 - 增强窗口切换";
 
 // MARK: - 权限提示
-"accessibility_permission_required" = "DevSwitcher2 需要辅助功能权限才能正常工作。";
+"accessibility_permission_required" = "Switcher2 需要辅助功能权限才能正常工作。";
 "open_system_preferences" = "打开系统偏好设置";
 "accessibility_permission_title" = "需要辅助功能权限";
-"accessibility_permission_message" = "DevSwitcher2 需要辅助功能权限来获取和切换应用程序窗口。请在系统偏好设置 > 安全性与隐私 > 辅助功能中启用 DevSwitcher2。";
+"accessibility_permission_message" = "Switcher2 需要辅助功能权限来获取和切换应用程序窗口。请在系统偏好设置 > 安全性与隐私 > 辅助功能中启用 Switcher2。";
 "open_system_preferences_button" = "打开系统偏好设置";
 "setup_later" = "稍后设置";
 "accessibility_permission_granted" = "辅助功能权限已授予";
 
 // MARK: - 需要重启
 "restart_required_title" = "需要重启应用";
-"restart_required_message" = "辅助功能权限已授予！请重启 DevSwitcher2 以使更改生效。";
+"restart_required_message" = "辅助功能权限已授予！请重启 Switcher2 以使更改生效。";
 "restart_now" = "立即重启";
 "restart_later" = "稍后重启";
 
@@ -66,7 +66,7 @@
 
 // MARK: - 菜单栏
 "preferences" = "偏好设置";
-"quit_app" = "退出 DevSwitcher2";
+"quit_app" = "退出 Switcher2";
 
 // MARK: - 偏好设置
 "preferences_title" = "偏好设置";
@@ -199,6 +199,9 @@
 
 // MARK: - 高级设置 - 切换器视图显示设置
 "switcher_display_section_title" = "切换器视图显示设置";
+"switcher_view_enabled_label" = "显示切换器视图";
+"switcher_view_enabled_description" = "开启后按快捷键显示切换器界面；关闭后不显示界面，直接切换到下一个窗口";
+"status_bar_toggle_switcher_view" = "显示切换器视图";
 "show_number_keys_label" = "显示数字键指示器";
 "show_number_keys_description" = "在切换器中显示数字键指示器(1-9)以便快速选择";
 
@@ -282,9 +285,9 @@
 "no_app_configs_message" = "暂无应用特定配置";
 
 // MARK: - 关于页面
-"about_app" = "关于 DevSwitcher2";
+"about_app" = "关于 Switcher2";
 "version" = "版本 2.7.1";
-"app_description" = "DevSwitcher2 是一款现代化的 macOS 生产力工具，通过双模式切换功能增强您的窗口和应用切换体验。";
+"app_description" = "Switcher2 是一款现代化的 macOS 生产力工具，通过双模式切换功能增强您的窗口和应用切换体验。";
 "main_features" = "主要功能:";
 "feature_1" = "• DS2 模式：增强的同应用窗口切换";
 "feature_2" = "• CT2 模式：改进的全应用 Command+Tab";
@@ -300,7 +303,7 @@
 "open_website" = "访问官网";
 "buy_me_coffee" = "请我喝咖啡";
 "support_development" = "支持开发";
-"coffee_description" = "如果您觉得 DevSwitcher2 很有用，请考虑请我喝杯咖啡来支持持续开发！";
+"coffee_description" = "如果您觉得 Switcher2 很有用，请考虑请我喝杯咖啡来支持持续开发！";
 "copyright" = "© 2025 River. 保留所有权利。";
 
 // MARK: - 配色方案设置

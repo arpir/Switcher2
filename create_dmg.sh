@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# DMG 创建脚本 - MacEasySymbol
+# DMG 创建脚本 - Switcher2
 # 使用方法: ./create_dmg.sh [options]
 # 选项:
-#   --app-path PATH    指定应用程序路径 (默认: ./signed-release/MacEasySymbol.app)
+#   --app-path PATH    指定应用程序路径 (默认: ./build/Switcher2.app)
 #   --output-dir DIR   指定输出目录 (默认: 当前目录)
 #   --help             显示帮助信息
 
 set -e  # 出错时退出
 
 # 默认配置
-APP_NAME="DevSwitcher2"
-APP_PATH="./signed-release/DevSwitcher2.app"
+APP_NAME="Switcher2"
+APP_PATH="./build/Switcher2.app"
 OUTPUT_DIR="."
 TEMP_DIR="./temp_dmg"
 
@@ -27,12 +27,12 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         --help)
-            echo "DMG 创建脚本 - DevSwitcher2"
+            echo "DMG 创建脚本 - Switcher2"
             echo ""
             echo "使用方法: $0 [options]"
             echo ""
             echo "选项:"
-            echo "  --app-path PATH    指定应用程序路径 (默认: ./signed-release/MacEasySymbol.app)"
+            echo "  --app-path PATH    指定应用程序路径 (默认: ./build/Switcher2.app)"
             echo "  --output-dir DIR   指定输出目录 (默认: 当前目录)"
             echo "  --help             显示此帮助信息"
             echo ""
@@ -67,17 +67,17 @@ if [ -f "$APP_PATH/Contents/Info.plist" ]; then
             VERSION_STRING="${VERSION}"
         fi
         echo "检测到版本: $VERSION_STRING"
-        DMG_NAME="DevSwitcher2-${VERSION_STRING}"
-        VOLUME_NAME="DevSwitcher2 ${VERSION_STRING}"
+        DMG_NAME="${APP_NAME}-${VERSION_STRING}"
+        VOLUME_NAME="${APP_NAME} ${VERSION_STRING}"
     else
         echo "⚠️  无法读取版本号，使用默认名称"
-        DMG_NAME="DevSwitcher2"
-        VOLUME_NAME="DevSwitcher2"
+        DMG_NAME="${APP_NAME}"
+        VOLUME_NAME="${APP_NAME}"
     fi
 else
     echo "⚠️  未找到 Info.plist，使用默认名称"
-    DMG_NAME="DevSwitcher2"
-    VOLUME_NAME="DevSwitcher2"
+    DMG_NAME="${APP_NAME}"
+    VOLUME_NAME="${APP_NAME}"
 fi
 
 # 确保输出目录存在
@@ -133,8 +133,8 @@ hdiutil attach "$DMG_TEMP"
 # 等待挂载完成
 sleep 2
 
-# 设置 Finder 视图选项（通过 AppleScript）
-osascript <<EOD
+# 设置 Finder 视图选项（通过 AppleScript，失败不影响 DMG 创建）
+osascript <<EOD || echo "⚠️  Finder 美化步骤已跳过（未授予自动化权限），DMG 仍会正常创建"
 tell application "Finder"
     tell disk "$VOLUME_NAME"
         open
