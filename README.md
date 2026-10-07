@@ -1,11 +1,8 @@
 # Switcher2
 
-<div align="center">
-[![macOS](https://img.shields.io/badge/macOS-12.0+-000000?style=for-the-badge&logo=apple&logoColor=white)](https://www.apple.com/macos/)
-[![Swift](https://img.shields.io/badge/swift-5.9+-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org/)
-[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+**只解决“同应用不同窗口”的切换问题**，原作者 [DevSwitcher2](https://github.com/vaspike/DevSwitcher2)，如果觉得好用可以买杯咖啡给原作者~
 
-macOS 同应用不同窗口切换，原作者 [DevSwitcher2](https://github.com/vaspike/DevSwitcher2)，在原来代码的基础上做了精简，**只解决“同应用不同窗口”的切换问题**。没有浮动窗口没有复杂设置！
+![预览](https://raw.githubusercontent.com/arpir/Switcher2/refs/heads/main/Preview.png)
 
 
 
